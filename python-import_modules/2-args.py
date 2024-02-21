@@ -14,4 +14,3 @@ if __name__ == "__main__":
     if length > 0:
         for arg in range(1, length + 1):
             print("{}: {}".format(arg, argv[arg]))
-            

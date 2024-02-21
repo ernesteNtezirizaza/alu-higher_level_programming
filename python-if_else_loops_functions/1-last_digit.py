@@ -12,4 +12,3 @@ elif (lastDigit < 6) and (lastDigit != 0):
     print(f"{string} {number} is {lastDigit} and is less than 6 and not 0")
 else:
     print(f"{string} {number} is {lastDigit} and is 0")
-    

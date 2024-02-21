@@ -18,4 +18,3 @@ if __name__ == "__main__":
         y = int(sys.argv[3])
         z = sys.argv[2]
         print("{} {} {} = {}".format(x, z, y, operators[z](x, y)))
-        

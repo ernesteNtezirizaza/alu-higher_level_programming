@@ -87,4 +87,4 @@ else:
         NQueen = Solution()
         solution_list = NQueen.solveNQueens(int(sys.argv[1]))
         for solution in solution_list:
-            print(solution
+            print(solution)

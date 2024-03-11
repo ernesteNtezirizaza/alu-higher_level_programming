@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module define classes for singly-linked list impementation"""
 
+
 class Node:
     """Objs of this clsass represents a node in a singly-linked list."""
 

@@ -1,25 +1,24 @@
 #!/usr/bin/python3
+# class definition of a City
 """
-This module defines the 'City' class, which represents the 'cities' table,
-and an instance 'Base' of the declarative base class.
+   Define 'City(Base)' class
+   import 'sqlalchemy'
 """
-from sqlalchemy import Column, Integer, String, ForeignKey
-from model_state import Base, State
+
+from sqlalchemy import Column, ForeignKey, Integer, String
+from sqlalchemy.ext.declarative import declarative_base
+
+Base = declarative_base()
 
 
 class City(Base):
-    """
-    This class maps to the 'cities' table in the MySQL database.
-
+    """Represents a city for a MySQL database.
     Attributes:
-        __tablename__ (str): The name of the corresponding database table.
-        id (int): The primary key for the 'cities' table.
-        name (str): The name of the city.
-        state_id (int): The foreign key referencing the 'id' column of the
-                        'states' table.
+        id (str): The city's id.
+        name (sqlalchemy.Integer): The city's name.
+        state_id (sqlalchemy.String): The city's state id.
     """
-    __tablename__ = 'cities'
-    id = Column(Integer, primary_key=True, unique=True,
-                autoincrement=True, nullable=False)
+    __tablename__ = "cities"
+    id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
-    state_id = Column(Integer, ForeignKey(State.id), nullable=False)
+    state_id = Column(Integer, ForeignKey("states.id"), nullable=False)

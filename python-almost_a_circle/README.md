@@ -1,1 +1,1 @@
-<!-- Python - almost a circle -->
+Python - Object-relational mapping
